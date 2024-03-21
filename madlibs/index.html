@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madlibs</title>
+    <style>
+        body {
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1,
+        p {
+            margin: .25rem;
+            line-height: 26pt;
+        }
+
+        p {
+            max-width: 400px;
+            min-width: 100px;
+        }
+
+        .wrapper {
+            background-color: whitesmoke;
+            list-style-type: none;
+            padding: 0;
+            border-radius: 3px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .row {
+            padding: .5em;
+        }
+
+        .row>input,
+        .row>button {
+            padding: .5em;
+        }
+
+        .row>button {
+            background: gray;
+            color: white;
+            border: 0;
+        }
+
+        .story {
+            padding: .5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Create a Madlib</h1>
+        <form>
+            <p>Nouns</p>
+            <ul class="wrapper">
+                <li class="row">
+                    <input type=" text" id="noun1" placeholder="Enter a noun">
+                </li>
+                <li class="row">
+                    <input type=" text" id="noun2" placeholder="Enter a noun">
+                </li>
+                <li class="row">
+                    <input type=" text" id="noun3" placeholder="Enter a noun">
+                </li>
+                <li class="row">
+                    <input type=" text" id="noun4" placeholder="Enter a noun">
+                </li>
+                <li class="row">
+                    <input type=" text" id="noun5" placeholder="Enter a noun">
+                </li>
+            </ul>
+            <p>Verbs</p>
+            <ul class="wrapper">
+                <li class="row">
+                    <input type="text" size="35" id="verb1" placeholder="Enter a verb ending in ing">
+                </li>
+                <li class="row">
+                    <input type="text" size="35" id="verb2" placeholder="Enter a verb ending in ing">
+                </li>
+            </ul>
+            <p>Adjectives</p>
+            <ul class="wrapper">
+                <li class="row">
+                    <input type="text" id="adjective1" placeholder="Enter an adjective">
+                </li>
+                <li class="row">
+                    <input type="text" id="adjective2" placeholder="Enter an adjective">
+                </li>
+                <li class="row">
+                    <input type="text" id="adjective3" placeholder="Enter an adjective">
+                </li>
+                <li class="row">
+                    <input type="text" id="adjective4" placeholder="Enter an adjective">
+                </li>
+            </ul>
+            <ul class="wrapper">
+                <li class="row">
+                    <input id="getstory" type="button" value="Get Story">
+                </li>
+            </ul>
+        </form>
+        <!-- <p>In Wenatchee, the [ADJECTIVE] mountains tower over the [NOUN], 
+            offering [ADJECTIVE] trails for the [NOUN] to explore. 
+            Whether you're [VERB ending in ING] along the riverbanks 
+            or [VERB ending in ING] through the rolling hills, 
+            every [NOUN] is ARTICLE ADJECTIVE adventure 
+            waiting to happen. Don't forget to pack your [NOUN] 
+            and [NOUN] for an unforgettable outdoor experience!</p> -->
+            
+        <p class="story" id="story1"></p>
+    </div>
+</body>
+
+</html>
